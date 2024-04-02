@@ -143,6 +143,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "預約體驗";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -213,7 +214,7 @@
             // 
             this.pictureBox_field.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_field.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_field.Image")));
-            this.pictureBox_field.Location = new System.Drawing.Point(876, 300);
+            this.pictureBox_field.Location = new System.Drawing.Point(875, 300);
             this.pictureBox_field.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox_field.Name = "pictureBox_field";
             this.pictureBox_field.Size = new System.Drawing.Size(340, 301);
@@ -224,7 +225,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Location = new System.Drawing.Point(973, 635);
+            this.pictureBox3.Location = new System.Drawing.Point(972, 635);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(64, 60);
@@ -250,7 +251,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(1060, 635);
+            this.pictureBox1.Location = new System.Drawing.Point(1059, 635);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 60);
@@ -262,7 +263,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Location = new System.Drawing.Point(1148, 635);
+            this.pictureBox4.Location = new System.Drawing.Point(1147, 635);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(64, 60);
@@ -288,7 +289,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.Location = new System.Drawing.Point(887, 635);
+            this.pictureBox5.Location = new System.Drawing.Point(886, 635);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(64, 60);
@@ -340,7 +341,7 @@
             this.label1.BackColor = System.Drawing.Color.Cornsilk;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(931, 247);
+            this.label1.Location = new System.Drawing.Point(930, 247);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 28);

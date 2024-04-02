@@ -40,6 +40,7 @@ namespace ProjGym
         public FrmNewCoachRegister()
         {
             InitializeComponent();
+            this.cb_GenderList.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -91,7 +92,8 @@ namespace ProjGym
                 Text = "請選擇專長",
                 TabIndex = tabindex,
                 ImeMode = ImeMode.Disable,
-            };
+                DropDownStyle = ComboBoxStyle.DropDownList,
+        };
             tabindex++;
 
             gymEntities db = new gymEntities();

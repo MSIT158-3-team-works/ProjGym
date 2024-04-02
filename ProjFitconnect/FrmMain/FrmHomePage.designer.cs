@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Info = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.首頁ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,20 +57,21 @@
             this.預約場地ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帳號登出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.關於我們ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fACEBOOKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iNSTAGRAMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yOUTUBEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.管理者中心ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.會員資訊ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開課審核ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.教練審核ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.付款資訊ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新增管理者ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.fACEBOOKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iNSTAGRAMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yOUTUBEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -137,9 +137,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(473, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(552, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(107, 96);
+            this.pictureBox2.Size = new System.Drawing.Size(125, 104);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -161,10 +162,10 @@
             this.關於我們ToolStripMenuItem,
             this.管理者中心ToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 111);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 120);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1249, 51);
+            this.menuStrip1.Size = new System.Drawing.Size(1382, 57);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -190,13 +191,14 @@
             // 預約體驗ToolStripMenuItem
             // 
             this.預約體驗ToolStripMenuItem.Name = "預約體驗ToolStripMenuItem";
-            this.預約體驗ToolStripMenuItem.Size = new System.Drawing.Size(156, 28);
+            this.預約體驗ToolStripMenuItem.Size = new System.Drawing.Size(179, 32);
             this.預約體驗ToolStripMenuItem.Text = "預約體驗";
+            this.預約體驗ToolStripMenuItem.Click += new System.EventHandler(this.預約體驗ToolStripMenuItem_Click);
             // 
             // 常見問題ToolStripMenuItem
             // 
             this.常見問題ToolStripMenuItem.Name = "常見問題ToolStripMenuItem";
-            this.常見問題ToolStripMenuItem.Size = new System.Drawing.Size(156, 28);
+            this.常見問題ToolStripMenuItem.Size = new System.Drawing.Size(179, 32);
             this.常見問題ToolStripMenuItem.Text = "常見問題";
             this.常見問題ToolStripMenuItem.Click += new System.EventHandler(this.常見問題ToolStripMenuItem_Click);
             // 
@@ -352,21 +354,21 @@
             // 
             this.fACEBOOKToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fACEBOOKToolStripMenuItem.Image")));
             this.fACEBOOKToolStripMenuItem.Name = "fACEBOOKToolStripMenuItem";
-            this.fACEBOOKToolStripMenuItem.Size = new System.Drawing.Size(194, 28);
+            this.fACEBOOKToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
             this.fACEBOOKToolStripMenuItem.Text = "FACEBOOK";
             // 
             // iNSTAGRAMToolStripMenuItem
             // 
             this.iNSTAGRAMToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("iNSTAGRAMToolStripMenuItem.Image")));
             this.iNSTAGRAMToolStripMenuItem.Name = "iNSTAGRAMToolStripMenuItem";
-            this.iNSTAGRAMToolStripMenuItem.Size = new System.Drawing.Size(194, 28);
+            this.iNSTAGRAMToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
             this.iNSTAGRAMToolStripMenuItem.Text = "INSTAGRAM";
             // 
             // yOUTUBEToolStripMenuItem
             // 
             this.yOUTUBEToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yOUTUBEToolStripMenuItem.Image")));
             this.yOUTUBEToolStripMenuItem.Name = "yOUTUBEToolStripMenuItem";
-            this.yOUTUBEToolStripMenuItem.Size = new System.Drawing.Size(194, 28);
+            this.yOUTUBEToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
             this.yOUTUBEToolStripMenuItem.Text = "YOUTUBE";
             this.yOUTUBEToolStripMenuItem.Click += new System.EventHandler(this.yOUTUBEToolStripMenuItem_Click);
             // 
@@ -415,6 +417,39 @@
             this.新增管理者ToolStripMenuItem.Text = "新增管理者";
             this.新增管理者ToolStripMenuItem.Click += new System.EventHandler(this.新增管理者ToolStripMenuItem_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(552, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 104);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // fACEBOOKToolStripMenuItem
+            // 
+            this.fACEBOOKToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fACEBOOKToolStripMenuItem.Image")));
+            this.fACEBOOKToolStripMenuItem.Name = "fACEBOOKToolStripMenuItem";
+            this.fACEBOOKToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
+            this.fACEBOOKToolStripMenuItem.Text = "FACEBOOK";
+            // 
+            // iNSTAGRAMToolStripMenuItem
+            // 
+            this.iNSTAGRAMToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("iNSTAGRAMToolStripMenuItem.Image")));
+            this.iNSTAGRAMToolStripMenuItem.Name = "iNSTAGRAMToolStripMenuItem";
+            this.iNSTAGRAMToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
+            this.iNSTAGRAMToolStripMenuItem.Text = "INSTAGRAM";
+            // 
+            // yOUTUBEToolStripMenuItem
+            // 
+            this.yOUTUBEToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yOUTUBEToolStripMenuItem.Image")));
+            this.yOUTUBEToolStripMenuItem.Name = "yOUTUBEToolStripMenuItem";
+            this.yOUTUBEToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
+            this.yOUTUBEToolStripMenuItem.Text = "YOUTUBE";
+            this.yOUTUBEToolStripMenuItem.Click += new System.EventHandler(this.yOUTUBEToolStripMenuItem_Click);
+            // 
             // FrmHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -432,9 +467,9 @@
             this.splitContainer1.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

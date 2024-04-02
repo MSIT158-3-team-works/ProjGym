@@ -26,6 +26,7 @@ namespace ProjGym
         public FrmNewMemberRegister()
         {
             InitializeComponent();
+            this.cb_GenderList.DropDownStyle = ComboBoxStyle.DropDownList;
             SetRoundButton(btn_Cancel, 40);
             SetRoundButton(btn_Save, 40);
         }

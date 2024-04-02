@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FrmMain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -129,6 +130,12 @@ namespace ProjGym
             this.splitContainer1.Panel2.Controls.Add(fAQ);
             fAQ.Show();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Frmfreetrial f = new Frmfreetrial();
+            f.Show();
         }
     }
 

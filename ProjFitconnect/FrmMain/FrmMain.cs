@@ -117,8 +117,6 @@ namespace ProjGym
             gymEntities gym = new gymEntities();
             gym.tclass_schedule.Add(s);
             gym.SaveChanges();
-
-
         }
     }
 }

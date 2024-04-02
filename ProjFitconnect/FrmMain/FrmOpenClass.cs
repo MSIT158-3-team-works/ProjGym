@@ -4,10 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YourNamespace;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjGym
 {
@@ -18,7 +21,13 @@ namespace ProjGym
         private FrmMain m;
         private DialogResult _isOk;
         private tclass_schedule _schedule;
-        
+
+        private int _classid;
+        private int _fieldid;
+        private int _timeid;
+        private tfield _field;
+        private string _Field_photo ="";
+
 
         public tclass_schedule schedule
         {
@@ -41,6 +50,7 @@ namespace ProjGym
                 _schedule.Max_student = Convert.ToInt32(txtMaxStudent.Text);
                 _schedule.class_payment = Convert.ToInt32(txtPrice.Text);
                 _schedule.class_status_id = 2;
+                _field.field_photo = _Field_photo;
                 return _schedule;
 
             }
@@ -54,21 +64,27 @@ namespace ProjGym
                 cbTime.SelectedValue = _schedule.course_time_id.ToString();
                 txtMaxStudent.Text = _schedule.Max_student.ToString();
                 txtPrice.Text = _schedule.class_payment.ToString();
-
+                _Field_photo = _field.field_photo.ToString();
+                if (!string.IsNullOrEmpty(_Field_photo))
+                {
+                    string path = Application.StartupPath + "\\fieldImages";
+                    pictureBox1.Image = new Bitmap(path + "\\" + _field.field_photo);
+                }
             }
         }
+        
+    
+
+    //public string classname { get { return this.cbClassName.SelectedItem.ToString(); } }
+    //public string field { get { return this.cbField.SelectedItem.ToString(); } }
+    //public string date { get { return this.dateTimePicker1.Value.ToString(); } }
+    //public string time { get { return this.cbTime.SelectedItem.ToString(); } }
+    //public string maxstudent { get { return this.txtMaxStudent.Text.ToString(); } }
+    //public string price { get { return this.txtPrice.Text.ToString(); } }
+    //public DialogResult result { get; set; }
 
 
-        //public string classname { get { return this.cbClassName.SelectedItem.ToString(); } }
-        //public string field { get { return this.cbField.SelectedItem.ToString(); } }
-        //public string date { get { return this.dateTimePicker1.Value.ToString(); } }
-        //public string time { get { return this.cbTime.SelectedItem.ToString(); } }
-        //public string maxstudent { get { return this.txtMaxStudent.Text.ToString(); } }
-        //public string price { get { return this.txtPrice.Text.ToString(); } }
-        //public DialogResult result { get; set; }
-
-
-        public DialogResult isOk
+    public DialogResult isOk
         {
             get
             {
@@ -110,6 +126,19 @@ namespace ProjGym
         {
             _isOk = DialogResult.Cancel;
             Close();
+        }
+
+        private void cbField_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedImagePath = cbField.SelectedItem.ToString();
+            try
+            {
+                pictureBox1.Image = new Bitmap(selectedImagePath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading image: " + ex.Message);
+            }
         }
     }
 }

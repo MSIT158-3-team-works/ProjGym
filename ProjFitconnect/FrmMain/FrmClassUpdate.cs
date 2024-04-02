@@ -140,7 +140,7 @@ namespace mid_Coonect
                     pictureBox1.Image = new Bitmap(path + "\\" + _imagepath);
                 }
                 classsort.class_photo=_imagepath;
-                MessageBox.Show(_imagepath);
+                //MessageBox.Show(_imagepath);
                 db.SaveChanges();
             } 
         }

@@ -202,31 +202,5 @@ namespace ProjGym
             db.SaveChanges();
             MessageBox.Show("註冊教練成功，請使用電話/信箱 + 密碼登入\n" + "若要開課，請等待管理員審核");
         }
-        /*
-        private void savedata_admin(FrmNewAdminRegister frm)
-        {
-            //產生[gym資料庫實體]
-            gymEntities db = new gymEntities();
-            //產生[Identity]表單物件
-            tIdentity admin = new tIdentity();
-            //設定新會員資料(名稱、身分ID、性別ID、電話、地址、生日、電郵、密碼、照片檔案名稱)
-            int admin_count = db.tIdentity.Count(x => x.role_id.Equals(3)) + 1;
-            admin.role_id = 3;
-            admin.name = $"Admin {admin_count}";
-            admin.phone = frm.phone;
-            admin.e_mail = "x";
-            admin.password = frm.password;
-            admin.photo = "x";
-            admin.birthday = DateTime.Now;
-            admin.address = "x";
-            admin.gender_id = 3;
-            //將新會員資料新增至[gym資料庫實體]
-            db.tIdentity.Add(admin);
-            //存回資料庫
-            db.SaveChanges();
-            MessageBox.Show("新增管理員完成");
-        }
-        */
-       
     }
 }

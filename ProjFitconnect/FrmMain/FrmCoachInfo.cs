@@ -14,7 +14,6 @@ namespace Revised_V1._1
 {
     public partial class FrmCoachInfo : Form
     {
-        private string _imagepath;
         private tIdentity _pid;private tcoach_info_id _cid;private tclasses _cl;
         public tIdentity pid { get { return _pid; }
             set { 
