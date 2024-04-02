@@ -15,6 +15,7 @@ namespace ProjGym
     public partial class FrmHomePage : Form
     {
         public tIdentity identity { get; set; }
+
         Label lblWelcome;
 
         public FrmHomePage()
@@ -60,16 +61,19 @@ namespace ProjGym
             lbl_Info.Visible = false;
             this.splitContainer1.Panel2.Controls.Clear();
             FrmEditMemberRegister editMemberRegister = new FrmEditMemberRegister();
-            //mdiparent???
+            editMemberRegister.identity= this.identity;
             editMemberRegister.afterEdit += this.showinfo;
             editMemberRegister.TopLevel = false;
             editMemberRegister.FormBorderStyle = FormBorderStyle.None;
-            this.splitContainer1.Panel2.Controls.Add(editMemberRegister);
+
+            editMemberRegister.Visible= true;
+            editMemberRegister.Dock = DockStyle.Fill;
             editMemberRegister.StartPosition = FormStartPosition.CenterParent;
             editMemberRegister.MdiParent = this;
-            MessageBox.Show("" +identity.id);
+            this.splitContainer1.Panel2.Controls.Add(editMemberRegister);
             editMemberRegister.Show();
- 
+            
+
         }
 
         private void showinfo(tIdentity m)
@@ -269,6 +273,26 @@ namespace ProjGym
         private void yOUTUBEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        }
+
+        private void 修改教練資料ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.splitContainer1.Panel2.Controls.Clear();
+            FrmEditCoachRegister f = new FrmEditCoachRegister();
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            this.splitContainer1.Panel2.Controls.Add(f);
+            f.Show();
+        }
+
+        private void 找商品ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.splitContainer1.Panel2.Controls.Clear();
+            FrmProducts f = new FrmProducts();
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            this.splitContainer1.Panel2.Controls.Add(f);
+            f.Show();
         }
     }
 }

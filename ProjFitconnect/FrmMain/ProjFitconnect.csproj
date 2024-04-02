@@ -70,6 +70,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Db.edmx</DependentUpon>
     </Compile>
+    <Compile Include="FrmEditCoachRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditCoachRegister.Designer.cs">
+      <DependentUpon>FrmEditCoachRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProducts.Designer.cs">
+      <DependentUpon>FrmProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Db.tt</DependentUpon>
     </Compile>
@@ -237,6 +249,12 @@
     <Compile Include="ttimes_detail.cs">
       <DependentUpon>Db.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmEditCoachRegister.resx">
+      <DependentUpon>FrmEditCoachRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProducts.resx">
+      <DependentUpon>FrmProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="tool\CoachBox.resx">
       <DependentUpon>CoachBox.cs</DependentUpon>
     </EmbeddedResource>

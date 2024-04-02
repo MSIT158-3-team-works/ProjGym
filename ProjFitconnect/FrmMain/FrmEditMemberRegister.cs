@@ -16,6 +16,7 @@ namespace ProjGym
     public delegate void D_Register(tIdentity m);
     public partial class FrmEditMemberRegister : Form
     {
+        public tIdentity identity { get; set; }
         //宣告一個資料型別為D_Register、名稱為afterEdit的事件
         public event D_Register afterEdit;
         //全域變數_filename用來記錄[登入者]的照片檔案名稱，預設為空字串(因為會員可以不放照片)
@@ -43,8 +44,7 @@ namespace ProjGym
             //利用[編輯會員資料]表單的MdiParent屬性取得[主程式表單]
             //利用[主程式表單]的member屬性取得[登入者]資料
             //取得[登入者]資料中唯一不變的id屬性(流水號)
-             MessageBox.Show(""+(this.MdiParent as FrmHomePage).identity.id);
-            int index = (this.MdiParent as FrmHomePage).identity.id;
+            int index = this.identity.id;
             //在[Identity]資料表內，利用[登入者]的流水號找出對應的會員(m)
             tIdentity m = db.tIdentity.FirstOrDefault(x => x.id == index);
             //利用m的名稱、身分ID、性別ID、電話、地址、生日、電郵、密碼、照片檔案名稱，
@@ -76,7 +76,7 @@ namespace ProjGym
             //利用[編輯會員資料]表單的MdiParent屬性取得[主程式表單]
             //利用[主程式表單]的member屬性取得[登入者]資料
             //取得[登入者]資料中唯一不變的id屬性(流水號)
-            int index = (this.MdiParent as FrmHomePage).identity.id;
+            int index = this.identity.id;
             //在[Identity]資料表內，利用[登入者]的流水號找出對應的會員欄位(m)
             tIdentity m = db.tIdentity.FirstOrDefault(x => x.id == index);
             //依照combobox_Gender所選的性別，找出對應的性別ID

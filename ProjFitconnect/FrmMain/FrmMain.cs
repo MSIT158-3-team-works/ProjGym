@@ -101,7 +101,7 @@ namespace ProjGym
             MainLogin();
         }
 
-        
+
         private void 新增課程ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             closeCurrentForm();
@@ -117,7 +117,9 @@ namespace ProjGym
             gymEntities gym = new gymEntities();
             gym.tclass_schedule.Add(s);
             gym.SaveChanges();
-        
 
+
+        }
     }
 }
+

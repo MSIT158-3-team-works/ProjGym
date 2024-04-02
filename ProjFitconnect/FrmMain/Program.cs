@@ -19,7 +19,9 @@ namespace FrmMain
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmHomePage());
+           Application.Run(new FrmHomePage());
+            //Application.Run(new FrmNewCoachRegister());
+            //Application.Run(new FrmEditCoachRegister());
         }
     }
 }
