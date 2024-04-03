@@ -53,8 +53,14 @@ namespace FrmMain
                 rb.rc = item.memberRateClass;
                 rb.cr = item.classReserve;
                 rb.i = item.iidentity;
+                rb.DRateClass += renewRate;
                 flowLayoutPanel1.Controls.Add(rb);
             }
+        }
+
+        private void renewRate(rateClassBox p)
+        {
+            
         }
     }
 }
