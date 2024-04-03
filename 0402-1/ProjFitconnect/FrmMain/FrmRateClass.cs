@@ -60,7 +60,11 @@ namespace FrmMain
 
         private void renewRate(rateClassBox p)
         {
-            
+            using(gymEntities db = new gymEntities()) 
+            {
+                //todo:2 完成將課程評價存入資料庫
+                //tmember_rate_class rateclass = db.tmember_rate_class.FirstOrDefault(r=>r.member_id ==p.);
+            }
         }
     }
 }
