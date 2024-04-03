@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d9c66ebff91e4983afc7803f4c2f4cdc" Name="Diagram1">
+      <Diagram DiagramId="aefea368223245bbb3b2d1f982f332c8" Name="Diagram1">
         <EntityTypeShape EntityType="gymModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gymModel.tclass_limit_details" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="gymModel.tclass_reserve" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
@@ -15,10 +15,10 @@
         <EntityTypeShape EntityType="gymModel.tclasses" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="gymModel.tcoach_expert" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="gymModel.tcoach_info_id" Width="1.5" PointX="5.25" PointY="20.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="gymModel.tfield" Width="1.5" PointX="6" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.tfield" Width="1.5" PointX="6" PointY="23.625" IsExpanded="true" />
         <EntityTypeShape EntityType="gymModel.tfield_reserve" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gymModel.tgender_Table" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="gymModel.tIdentity" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.tIdentity" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="gymModel.tidentity_role_detail" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="gymModel.tmember_follow" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="gymModel.tmember_rate_class" Width="1.5" PointX="10.5" PointY="9.75" IsExpanded="true" />

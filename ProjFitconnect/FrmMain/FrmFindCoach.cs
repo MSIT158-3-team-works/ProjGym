@@ -110,7 +110,7 @@ namespace Revised_V1._1
             gymEntities db = new gymEntities();
             var classsort = from cs in db.tclasses
                             select cs;
-            //this.dataGridView1.DataSource = classsort.ToList();
+            this.dataGridView1.DataSource = classsort.ToList();
             foreach (var r in classsort)
             {
                 CheckBox cb = new CheckBox();

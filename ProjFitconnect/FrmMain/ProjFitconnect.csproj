@@ -56,15 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmCoachInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCoachInfo.designer.cs">
-      <DependentUpon>FrmCoachInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="tool\CRoundPictureBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -79,6 +70,87 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCoachInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCoachInfo.designer.cs">
+      <DependentUpon>FrmCoachInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmField.Designer.cs">
+      <DependentUpon>FrmField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFollow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFollow.Designer.cs">
+      <DependentUpon>FrmFollow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHomePage.designer.cs">
+      <DependentUpon>FrmHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tclasses.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tclass_limit_details.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tclass_reserve.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tclass_schedule.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tclass_sort_有氧.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tclass_sort_訓練.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tclass_status_detail.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tcoach_expert.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tcoach_info_id.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tfield.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tfield_reserve.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tgender_Table.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tIdentity.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tidentity_role_detail.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tmember_follow.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tmember_rate_class.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tmember_status_details.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tool\CRoundPictureBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Frmfreetrial.cs">
       <SubType>Form</SubType>
@@ -164,23 +236,11 @@
     <Compile Include="FrmFAQ.designer.cs">
       <DependentUpon>FrmFAQ.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmField.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmField.Designer.cs">
-      <DependentUpon>FrmField.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmFindCoach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmFindCoach.designer.cs">
       <DependentUpon>FrmFindCoach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmHomePage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmHomePage.designer.cs">
-      <DependentUpon>FrmHomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -220,60 +280,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tclasses.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tclass_limit_details.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tclass_reserve.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tclass_schedule.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tclass_sort_有氧.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tclass_sort_訓練.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tclass_status_detail.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tcoach_expert.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tcoach_info_id.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tfield.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tfield_reserve.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tgender_Table.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tIdentity.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tidentity_role_detail.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tmember_follow.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tmember_rate_class.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tmember_status_details.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
     <Compile Include="tool\reservebox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -289,8 +295,17 @@
     <EmbeddedResource Include="FrmCoachInfo.resx">
       <DependentUpon>FrmCoachInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmField.resx">
+      <DependentUpon>FrmField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFollow.resx">
+      <DependentUpon>FrmFollow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frmfreetrial.resx">
       <DependentUpon>Frmfreetrial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHomePage.resx">
+      <DependentUpon>FrmHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tool\CourseBox.resx">
       <DependentUpon>CourseBox.cs</DependentUpon>
@@ -328,14 +343,8 @@
     <EmbeddedResource Include="FrmFAQ.resx">
       <DependentUpon>FrmFAQ.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmField.resx">
-      <DependentUpon>FrmField.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmFindCoach.resx">
       <DependentUpon>FrmFindCoach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmHomePage.resx">
-      <DependentUpon>FrmHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

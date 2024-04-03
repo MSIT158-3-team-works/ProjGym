@@ -23,58 +23,58 @@ namespace ProjGym
         private DialogResult _isOk;
         private tclass_schedule _schedule;
 
-        private int _classid;
-        private int _fieldid;
-        private int _timeid;
-        private tfield _field;
-        private string _Field_photo ="";
+        //private int _classid;
+        //private int _fieldid;
+        //private int _timeid;
+        //private tfield _field;
+        //private string _Field_photo ="";
 
 
-        public tclass_schedule schedule
-        {
-            get
-            {
-                if (_schedule == null)
-                {
-                    _schedule = new tclass_schedule();
-                }
+        //public tclass_schedule schedule
+        //{
+        //    get
+        //    {
+        //        if (_schedule == null)
+        //        {
+        //            _schedule = new tclass_schedule();
+        //        }
 
-                gymEntities gym = new gymEntities();
-                tclasses c = gym.tclasses.FirstOrDefault(x => x.class_name == this.cbClassName.Text);
-                _schedule.class_id = c.class_id;
-                _schedule.coach_id = m.identity.id;
-                tfield f = gym.tfield.FirstOrDefault(x => x.field_name == this.cbField.Text);
-                _schedule.field_id = f.field_id;
-                _schedule.course_date = this.dateTimePicker1.Value;
-                ttimes_detail t = gym.ttimes_detail.FirstOrDefault(x => x.time_name == this.cbTime.Text);
-                _schedule.course_time_id = t.time_id;
-                _schedule.Max_student = Convert.ToInt32(txtMaxStudent.Text);
-                _schedule.class_payment = Convert.ToInt32(txtPrice.Text);
-                _schedule.class_status_id = 2;
-                //_field.field_photo = _Field_photo;
-                return _schedule;
+        //        gymEntities gym = new gymEntities();
+        //        tclasses c = gym.tclasses.FirstOrDefault(x => x.class_name == this.cbClassName.Text);
+        //        _schedule.class_id = c.class_id;
+        //        _schedule.coach_id = m.identity.id;
+        //        tfield f = gym.tfield.FirstOrDefault(x => x.field_name == this.cbField.Text);
+        //        _schedule.field_id = f.field_id;
+        //        _schedule.course_date = this.dateTimePicker1.Value;
+        //        ttimes_detail t = gym.ttimes_detail.FirstOrDefault(x => x.time_name == this.cbTime.Text);
+        //        _schedule.course_time_id = t.time_id;
+        //        _schedule.Max_student = Convert.ToInt32(txtMaxStudent.Text);
+        //        _schedule.class_payment = Convert.ToInt32(txtPrice.Text);
+        //        _schedule.class_status_id = 2;
+        //        //_field.field_photo = _Field_photo;
+        //        return _schedule;
 
-            }
-            set
-            {
-                _schedule = value;
+        //    }
+        //    set
+        //    {
+        //        _schedule = value;
 
-                cbClassName.SelectedValue = _schedule.class_id.ToString();
-                cbField.SelectedValue = _schedule.field_id.ToString();
-                dateTimePicker1.Value = _schedule.course_date;
-                cbTime.SelectedValue = _schedule.course_time_id.ToString();
-                txtMaxStudent.Text = _schedule.Max_student.ToString();
-                txtPrice.Text = _schedule.class_payment.ToString();
-                /*
-                _Field_photo = _field.field_photo.ToString();
-                if (!string.IsNullOrEmpty(_Field_photo))
-                {
-                    string path = Application.StartupPath + "\\fieldImages";
-                    pictureBox1.Image = new Bitmap(path + "\\" + _field.field_photo);
-                }
-                */
-            }
-        }
+        //        cbClassName.SelectedValue = _schedule.class_id.ToString();
+        //        cbField.SelectedValue = _schedule.field_id.ToString();
+        //        dateTimePicker1.Value = _schedule.course_date;
+        //        cbTime.SelectedValue = _schedule.course_time_id.ToString();
+        //        txtMaxStudent.Text = _schedule.Max_student.ToString();
+        //        txtPrice.Text = _schedule.class_payment.ToString();
+        //        /*
+        //        _Field_photo = _field.field_photo.ToString();
+        //        if (!string.IsNullOrEmpty(_Field_photo))
+        //        {
+        //            string path = Application.StartupPath + "\\fieldImages";
+        //            pictureBox1.Image = new Bitmap(path + "\\" + _field.field_photo);
+        //        }
+        //        */
+        //    }
+        //}
         
     
 

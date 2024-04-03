@@ -77,7 +77,7 @@
           <Property Name="class_name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="class_introduction" Type="nvarchar(max)" />
           <Property Name="limited_gender" Type="int" Nullable="false" />
-          <Property Name="class_photo" Type="nvarchar" MaxLength="50" />
+          <Property Name="class_photo" Type="nvarchar(max)" />
           <Property Name="class_status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="tcoach_expert">
@@ -105,6 +105,7 @@
           <Property Name="floor" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="field_name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="field_payment" Type="money" Nullable="false" />
+          <Property Name="field_photo" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="tfield_reserve">
           <Key>
@@ -137,6 +138,7 @@
           <Property Name="birthday" Type="date" Nullable="false" />
           <Property Name="address" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="gender_id" Type="int" Nullable="false" />
+          <Property Name="activated" Type="bit" />
         </EntityType>
         <EntityType Name="tidentity_role_detail">
           <Key>
@@ -652,7 +654,7 @@
           <Property Name="class_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="class_introduction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="limited_gender" Type="Int32" Nullable="false" />
-          <Property Name="class_photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="class_photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="class_status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="tclass_limit_details" Relationship="Self.FK_classes_class_limit_details" FromRole="tclasses" ToRole="tclass_limit_details" />
           <NavigationProperty Name="tclass_schedule" Relationship="Self.FK_class_schedule_classes" FromRole="tclasses" ToRole="tclass_schedule" />
@@ -688,6 +690,7 @@
           <Property Name="floor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="field_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="field_payment" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="field_photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="tclass_schedule" Relationship="Self.FK_class_schedule_field" FromRole="tfield" ToRole="tclass_schedule" />
           <NavigationProperty Name="tregion_table" Relationship="Self.FK_field_region_table" FromRole="tfield" ToRole="tregion_table" />
           <NavigationProperty Name="tfield_reserve" Relationship="Self.FK_field_reserve_field" FromRole="tfield" ToRole="tfield_reserve" />
@@ -726,6 +729,7 @@
           <Property Name="birthday" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="gender_id" Type="Int32" Nullable="false" />
+          <Property Name="activated" Type="Boolean" />
           <NavigationProperty Name="tclass_reserve" Relationship="Self.FK_class_reserve_Identity1" FromRole="tIdentity" ToRole="tclass_reserve" />
           <NavigationProperty Name="tclass_schedule" Relationship="Self.FK_class_schedule_Identity" FromRole="tIdentity" ToRole="tclass_schedule" />
           <NavigationProperty Name="tcoach_expert" Relationship="Self.FK_coach_expert_Identity" FromRole="tIdentity" ToRole="tcoach_expert" />
@@ -1283,6 +1287,7 @@
                 <ScalarProperty Name="floor" ColumnName="floor" />
                 <ScalarProperty Name="field_name" ColumnName="field_name" />
                 <ScalarProperty Name="field_payment" ColumnName="field_payment" />
+                <ScalarProperty Name="field_photo" ColumnName="field_photo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1318,6 +1323,7 @@
                 <ScalarProperty Name="birthday" ColumnName="birthday" />
                 <ScalarProperty Name="address" ColumnName="address" />
                 <ScalarProperty Name="gender_id" ColumnName="gender_id" />
+                <ScalarProperty Name="activated" ColumnName="activated" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

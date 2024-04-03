@@ -27,29 +27,27 @@ namespace Gym
                 {
                     _field = new tfield();
                 }
-                //_field.region_id = Convert.ToInt32(fbregion.fieldValue);
-                //_field.floor = fbFieldFloor.fieldValue;
-                //_field.field_name = fbFieldName.fieldValue;
-                //_field.field_payment = Convert.ToDecimal(fbFieldPayment.fieldValue);
-                //_field.field_photo = _Field_photo;
+                _field.region_id = Convert.ToInt32(fbregion.fieldValue);
+                _field.floor = fbFieldFloor.fieldValue;
+                _field.field_name = fbFieldName.fieldValue;
+                _field.field_payment = Convert.ToDecimal(fbFieldPayment.fieldValue);
+                _field.field_photo = _Field_photo;
                 return _field;
             }
             set
             {
                 _field = value;
                 lblfID.Text = _field.field_id.ToString();
-                //fbregion.fieldValue = _field.region_id.ToString();
-                //fbFieldFloor.fieldValue = _field.floor;
-                //fbFieldName.fieldValue = _field.field_name;
-                //fbFieldPayment.fieldValue = _field.field_payment.ToString();
-                /*
+                fbregion.fieldValue = _field.region_id.ToString();
+                fbFieldFloor.fieldValue = _field.floor;
+                fbFieldName.fieldValue = _field.field_name;
+                fbFieldPayment.fieldValue = _field.field_payment.ToString();
                 _Field_photo = _field.field_photo;
                 if (!string.IsNullOrEmpty(_Field_photo))
                 {
                     string path = Application.StartupPath + "\\roomImages";
                     pictureBox1.Image = new Bitmap(path + "\\" + _Field_photo);
                 }
-                */
             }
         }
         public DialogResult isOk

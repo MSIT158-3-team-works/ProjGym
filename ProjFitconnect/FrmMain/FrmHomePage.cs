@@ -1,4 +1,5 @@
 ﻿using FrmMain;
+using Gym;
 using Revised_V1._1;
 using System;
 using System.Collections.Generic;
@@ -245,6 +246,18 @@ namespace ProjGym
         private void 預約體驗ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frmfreetrial f = new Frmfreetrial();
+            f.Show();
+        }
+
+        private void 評價ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.splitContainer1.Panel2.Controls.Clear();
+            FrmFollow f = new FrmFollow();
+            f.MdiParent = this;
+            f.identity = this.identity;
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            this.splitContainer1.Panel2.Controls.Add(f);
             f.Show();
         }
     }

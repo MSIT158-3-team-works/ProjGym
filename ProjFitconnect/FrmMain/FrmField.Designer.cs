@@ -33,10 +33,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.lblfID = new System.Windows.Forms.Label();
-            //this.fbFieldPayment = new prjComponentDemo.usercontrol.FieldBox();
-            //this.fbFieldName = new prjComponentDemo.usercontrol.FieldBox();
-            //this.fbFieldFloor = new prjComponentDemo.usercontrol.FieldBox();
-            //this.fbregion = new prjComponentDemo.usercontrol.FieldBox();
+            this.fbFieldPayment = new prjComponentDemo.usercontrol.FieldBox();
+            this.fbFieldName = new prjComponentDemo.usercontrol.FieldBox();
+            this.fbFieldFloor = new prjComponentDemo.usercontrol.FieldBox();
+            this.fbregion = new prjComponentDemo.usercontrol.FieldBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,7 +89,6 @@
             this.lblfID.TabIndex = 6;
             this.lblfID.Text = "label1";
             this.lblfID.Visible = false;
-            /*
             // 
             // fbFieldPayment
             // 
@@ -103,8 +102,6 @@
             this.fbFieldPayment.Name = "fbFieldPayment";
             this.fbFieldPayment.Size = new System.Drawing.Size(246, 79);
             this.fbFieldPayment.TabIndex = 2;
-            */
-            /*
             // 
             // fbFieldName
             // 
@@ -118,14 +115,12 @@
             this.fbFieldName.Name = "fbFieldName";
             this.fbFieldName.Size = new System.Drawing.Size(246, 79);
             this.fbFieldName.TabIndex = 1;
-            */
-            /*
             // 
             // fbFieldFloor
             // 
             this.fbFieldFloor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            //this.fbFieldFloor.fieldName = "樓層";
+            this.fbFieldFloor.fieldName = "樓層";
             this.fbFieldFloor.fieldValue = "";
             this.fbFieldFloor.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.fbFieldFloor.Location = new System.Drawing.Point(13, 105);
@@ -133,8 +128,6 @@
             this.fbFieldFloor.Name = "fbFieldFloor";
             this.fbFieldFloor.Size = new System.Drawing.Size(246, 79);
             this.fbFieldFloor.TabIndex = 0;
-            */
-            /*
             // 
             // fbregion
             // 
@@ -148,21 +141,20 @@
             this.fbregion.Name = "fbregion";
             this.fbregion.Size = new System.Drawing.Size(246, 79);
             this.fbregion.TabIndex = 7;
-            */
             // 
             // FrmField
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            //this.Controls.Add(this.fbregion);
+            this.Controls.Add(this.fbregion);
             this.Controls.Add(this.lblfID);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            //this.Controls.Add(this.fbFieldPayment);
-            //this.Controls.Add(this.fbFieldName);
-            //this.Controls.Add(this.fbFieldFloor);
+            this.Controls.Add(this.fbFieldPayment);
+            this.Controls.Add(this.fbFieldName);
+            this.Controls.Add(this.fbFieldFloor);
             this.Name = "FrmField";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -173,14 +165,14 @@
 
         #endregion
 
-        //private prjComponentDemo.usercontrol.FieldBox fbFieldFloor;
-        //private prjComponentDemo.usercontrol.FieldBox fbFieldName;
-        //private prjComponentDemo.usercontrol.FieldBox fbFieldPayment;
+        private prjComponentDemo.usercontrol.FieldBox fbFieldFloor;
+        private prjComponentDemo.usercontrol.FieldBox fbFieldName;
+        private prjComponentDemo.usercontrol.FieldBox fbFieldPayment;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lblfID;
-        //private prjComponentDemo.usercontrol.FieldBox fbregion;
+        private prjComponentDemo.usercontrol.FieldBox fbregion;
     }
 }

@@ -26,6 +26,7 @@ namespace FrmMain
         public string floor { get; set; }
         public string field_name { get; set; }
         public decimal field_payment { get; set; }
+        public string field_photo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tclass_schedule> tclass_schedule { get; set; }
