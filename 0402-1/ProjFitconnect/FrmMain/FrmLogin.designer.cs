@@ -70,7 +70,7 @@
             this.tb_UserName.Name = "tb_UserName";
             this.tb_UserName.Size = new System.Drawing.Size(325, 22);
             this.tb_UserName.TabIndex = 2;
-            this.tb_UserName.Text = "0000";
+            this.tb_UserName.Text = "0956321457";
             // 
             // tb_Password
             // 
@@ -78,7 +78,7 @@
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.Size = new System.Drawing.Size(325, 22);
             this.tb_Password.TabIndex = 4;
-            this.tb_Password.Text = "admin";
+            this.tb_Password.Text = "1fPd";
             // 
             // label3
             // 

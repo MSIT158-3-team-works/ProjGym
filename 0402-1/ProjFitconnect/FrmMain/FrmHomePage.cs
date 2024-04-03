@@ -275,5 +275,19 @@ namespace ProjGym
         {
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
         }
+
+        private void 對課程評價ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.splitContainer1.Panel2.Controls.Clear();
+            FrmRateClass f = new FrmRateClass();
+            f.MdiParent = this;
+            f.identity = this.identity;
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.Visible = true;
+            f.Dock = DockStyle.Fill;
+            this.splitContainer1.Panel2.Controls.Add(f);
+            f.Show();
+        }
     }
 }

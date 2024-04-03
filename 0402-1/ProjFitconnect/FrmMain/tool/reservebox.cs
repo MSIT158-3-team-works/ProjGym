@@ -40,5 +40,9 @@ namespace FrmMain
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (this.showReserve != null) this.showReserve(this);
+        }
     }
 }
