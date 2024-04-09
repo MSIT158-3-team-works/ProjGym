@@ -26,7 +26,7 @@ namespace FrmMain.tool
 
         public tIdentity i { get { return _i; } set { _i = value; lblCoach.Text = _i.name; } }
         public tmember_rate_class rc { get { return _rc; } set { _rc = value; txtrate.Text = _rc.rate.ToString(); txtFeedback.Text = _rc.describe; } }
-        public tclass_schedule cs { get { return _cs; } set { _cs = value; lblDate.Text = _cs.course_date.ToString(); } }
+        public tclass_schedule cs { get { return _cs; } set { _cs = value; lblDate.Text = _cs.course_date.ToShortDateString(); } }
         public tclasses c { get { return _c; } set { _c = value; lblClassName.Text = _c.class_name; } }
 
         public tclass_reserve cr { get { return _cr; } set { _cr = value; } }

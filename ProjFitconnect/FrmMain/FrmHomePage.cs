@@ -41,6 +41,7 @@ namespace ProjGym
             f.afterLogin += this.showinfo;
             f.ShowDialog();
             if (f.isOK != DialogResult.OK) return; 
+            this.登入ToolStripMenuItem.Visible = false;
         }
         private void closeCurrentForm()
         {
@@ -184,7 +185,8 @@ namespace ProjGym
             if (Logout != DialogResult.OK) return;
             this.identity = null;
             this.lblWelcome = null;
-            showmain(); 
+            showmain();
+            this.登入ToolStripMenuItem.Visible = true;
         }
 
         private void showmain()
@@ -214,6 +216,7 @@ namespace ProjGym
         {
             this.splitContainer1.Panel2.Controls.Clear();
             FrmFindCoach f = new FrmFindCoach();
+            f.identity = this.identity;
             f.TopLevel = false;
             f.FormBorderStyle = FormBorderStyle.None;
             this.splitContainer1.Panel2.Controls.Add(f);
@@ -387,5 +390,15 @@ namespace ProjGym
             f.Show();
         }
 
+        private void 新增場地ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.splitContainer1.Panel2.Controls.Clear();
+            FrmField f = new FrmField();
+            f.MdiParent = this;
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            this.splitContainer1.Panel2.Controls.Add(f);
+            f.Show();
+        }
     }
 }
