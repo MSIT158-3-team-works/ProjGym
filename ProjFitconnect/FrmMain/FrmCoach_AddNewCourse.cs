@@ -25,15 +25,18 @@ namespace ProjGym
 
         private void FrmCoach_CourseReservation_Load(object sender, EventArgs e)
         {
-            gymEntities gymEntities = new gymEntities();
-            var courses = from course in gymEntities.tclasses
-                          select course;
-            courses.ToList().ForEach(course => { this.cb_Class.Items.Add(course.class_name.ToString()); });
-            var fields = from field in gymEntities.tfield
+            gymEntities db = new gymEntities();
+            var courses = from a in db.tclasses
+                          from b in db.tcoach_expert
+                          where b.coach_id == coach.id
+                          where a.class_id == b.class_id
+                          select b;
+            courses.ToList().ForEach(course => { this.cb_Class.Items.Add(course.tclasses.class_name); });
+            var fields = from field in db.tfield
                          select field;
             fields.ToList().ForEach(field => { this.cb_Field.Items.Add($"{field.field_name} | {field.field_payment:C0}"); });
 
-            var periods = from period in gymEntities.ttimes_detail
+            var periods = from period in db.ttimes_detail
                           select period;
             periods.ToList().ForEach(period =>
             {
@@ -86,7 +89,7 @@ namespace ProjGym
                 for (int j = 0; j < timePeriodEndIndex - timePeriodStartIndex; j++)
                 {
                     tclass_schedule schedule = new tclass_schedule();
-                    schedule.class_id = this.cb_Class.SelectedIndex + 1;
+                    //schedule.class_id = this.cb_Class.SelectedIndex + 1;
                     schedule.field_id = this.cb_Field.SelectedIndex + 1;
                     //Todo:coach_id = 1，要改為取得登入者id
                     schedule.coach_id = coach.id;
