@@ -7,6 +7,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -161,35 +162,31 @@ namespace Revised_V1._1
 
         private void ShowAllTrackedCoaches()
         {
+            //if (identity == null){MessageBox.Show("請登入會員"); return; }
             gymEntities db = new gymEntities();
             var query = from i in db.tIdentity
                         join c in db.tcoach_info_id on i.id equals c.coach_id
+                        join f in db.tmember_follow on i.id equals f.coach_id 
                         join ce in db.tcoach_expert on i.id equals ce.coach_id into expertGroup
                         from expert in expertGroup.DefaultIfEmpty()
-                        join cs in db.tclasses on (expert != null ? expert.class_id : default(int?)) equals cs.class_id into expertiseGroup
+                        join cs in db.tclasses on expert.class_id equals cs.class_id into expertiseGroup
                         from expertise in expertiseGroup.DefaultIfEmpty()
-                        join f in db.tmember_follow on i.id equals f.coach_id into followGroup
-                        from follow in followGroup.DefaultIfEmpty()
-                        where i.role_id == 2 &&
-                              (follow == null || (follow.status_id == 1 && follow.member_id == this.identity.id))
-                        select new { Identity = i, CoachInfo = c, Expertise = expertise, FollowInfo = follow };
-
-            flowLayoutPanel1.Controls.Clear();
-
-            if (query != null)
-                return;
+                        where i.role_id == 2 &&f.status_id == 1 &&(f.member_id == this.identity.id)
+                        select new { Identity = i, CoachInfo = c, Expertise = expertise };
 
             foreach (var item in query)
             {
                 CoachBox cb = new CoachBox();
-                cb.Width = flowLayoutPanel1.Width / 2;
-                cb.Height = 200;
+                cb.Width = flowLayoutPanel1.Width * 3 / 4;
+                cb.Height = 180;
                 cb.Identity = item.Identity;
                 cb.cid = item.CoachInfo;
                 cb.cst = item.Expertise;
-                cb.followInfo = item.FollowInfo;
+                cb.learnMore += this.LearnMore;
+                cb.showmember += this.ShowMember;
+                if (flowLayoutPanel1.Controls.Equals(cb)) return;
                 flowLayoutPanel1.Controls.Add(cb);
-            }
+            }   
         }
 
         private void Cb_CheckStateChanged(object sender, EventArgs e)
@@ -295,7 +292,7 @@ namespace Revised_V1._1
             }
             else
             {
-                flowLayoutPanel1.Controls.Clear();
+                this.flowLayoutPanel1.Controls.Clear();
             }
         }
     }

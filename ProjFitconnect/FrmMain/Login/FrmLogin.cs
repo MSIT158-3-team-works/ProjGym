@@ -94,7 +94,8 @@ namespace ProjGym
             member.birthday = DateTime.Parse(frm.birth);
             member.e_mail = frm.mail;
             member.password = frm.password;
-            member.photo = frm.file; 
+            member.photo = frm.file;
+            member.gender_id = g.gender_id;
             db.tIdentity.Add(member); 
             db.SaveChanges();
             MessageBox.Show("註冊成功，請使用電話/信箱 + 密碼登入");

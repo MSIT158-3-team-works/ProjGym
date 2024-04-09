@@ -216,6 +216,7 @@ namespace ProjGym
         {
             this.splitContainer1.Panel2.Controls.Clear();
             FrmFindCoach f = new FrmFindCoach();
+            f.identity = this.identity;
             f.TopLevel = false;
             f.FormBorderStyle = FormBorderStyle.None;
             this.splitContainer1.Panel2.Controls.Add(f);
@@ -389,5 +390,15 @@ namespace ProjGym
             f.Show();
         }
 
+        private void 新增場地ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.splitContainer1.Panel2.Controls.Clear();
+            FrmField f = new FrmField();
+            f.MdiParent = this;
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            this.splitContainer1.Panel2.Controls.Add(f);
+            f.Show();
+        }
     }
 }

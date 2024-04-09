@@ -22,7 +22,7 @@ namespace FrmMain
             Application.SetCompatibleTextRenderingDefault(false); 
 
             Application.Run(new FrmHomePage());
-            Application.Run(new FrmField());
+            //Application.Run(new FrmField());
         }
     }
 }

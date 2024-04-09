@@ -172,5 +172,10 @@ namespace Gym
             db.SaveChanges();
             MessageBox.Show("場地資料已更新");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.lblfID.Text = string.Empty;
+        }
     }
 }

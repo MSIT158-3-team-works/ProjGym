@@ -39,6 +39,7 @@
             this.fbFieldPayment = new prjComponentDemo.usercontrol.FieldBox();
             this.fbFieldName = new prjComponentDemo.usercontrol.FieldBox();
             this.fbFieldFloor = new prjComponentDemo.usercontrol.FieldBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -125,7 +126,7 @@
             // fbregion
             // 
             this.fbregion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.fbregion.fieldName = "region";
+            this.fbregion.fieldName = "地區";
             this.fbregion.fieldValue = "";
             this.fbregion.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.fbregion.Location = new System.Drawing.Point(223, 15);
@@ -170,12 +171,25 @@
             this.fbFieldFloor.Size = new System.Drawing.Size(215, 68);
             this.fbFieldFloor.TabIndex = 0;
             // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button4.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button4.Location = new System.Drawing.Point(957, 66);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(106, 33);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "清除";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // FrmField
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(1124, 672);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.fbregion);
             this.Controls.Add(this.lblfID);
@@ -211,5 +225,6 @@
         private prjComponentDemo.usercontrol.FieldBox fbregion;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

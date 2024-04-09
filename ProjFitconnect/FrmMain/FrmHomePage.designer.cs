@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Info = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.首頁ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.預約體驗ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,9 +54,6 @@
             this.新增課程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.預約場地ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.關於我們ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fACEBOOKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iNSTAGRAMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yOUTUBEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.管理者中心ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.會員資訊ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開課審核ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,13 +61,18 @@
             this.場地付款資訊ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.課程付款資訊ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新增管理者ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.新增場地ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.fACEBOOKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iNSTAGRAMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yOUTUBEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.登出ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.登入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -137,17 +138,6 @@
             this.lbl_Info.Size = new System.Drawing.Size(46, 23);
             this.lbl_Info.TabIndex = 4;
             this.lbl_Info.Text = "Info";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(552, 13);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 104);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
             // 
             // menuStrip1
             // 
@@ -354,34 +344,6 @@
             this.關於我們ToolStripMenuItem.Text = "關於我們";
             this.關於我們ToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
-            // fACEBOOKToolStripMenuItem
-            // 
-            this.fACEBOOKToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
-            this.fACEBOOKToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fACEBOOKToolStripMenuItem.Image")));
-            this.fACEBOOKToolStripMenuItem.Name = "fACEBOOKToolStripMenuItem";
-            this.fACEBOOKToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
-            this.fACEBOOKToolStripMenuItem.Text = "FACEBOOK";
-            // 
-            // iNSTAGRAMToolStripMenuItem
-            // 
-            this.iNSTAGRAMToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
-            this.iNSTAGRAMToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("iNSTAGRAMToolStripMenuItem.Image")));
-            this.iNSTAGRAMToolStripMenuItem.Name = "iNSTAGRAMToolStripMenuItem";
-            this.iNSTAGRAMToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
-            this.iNSTAGRAMToolStripMenuItem.Text = "INSTAGRAM";
-            // 
-            // yOUTUBEToolStripMenuItem
-            // 
-            this.yOUTUBEToolStripMenuItem.AutoToolTip = true;
-            this.yOUTUBEToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
-            this.yOUTUBEToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yOUTUBEToolStripMenuItem.Image")));
-            this.yOUTUBEToolStripMenuItem.Name = "yOUTUBEToolStripMenuItem";
-            this.yOUTUBEToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.yOUTUBEToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
-            this.yOUTUBEToolStripMenuItem.Text = "YOUTUBE";
-            this.yOUTUBEToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
-            this.yOUTUBEToolStripMenuItem.Click += new System.EventHandler(this.yOUTUBEToolStripMenuItem_Click);
-            // 
             // 管理者中心ToolStripMenuItem
             // 
             this.管理者中心ToolStripMenuItem.BackColor = System.Drawing.Color.SteelBlue;
@@ -391,6 +353,7 @@
             this.教練審核ToolStripMenuItem,
             this.場地付款資訊ToolStripMenuItem,
             this.課程付款資訊ToolStripMenuItem,
+            this.新增場地ToolStripMenuItem,
             this.新增管理者ToolStripMenuItem});
             this.管理者中心ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.管理者中心ToolStripMenuItem.Name = "管理者中心ToolStripMenuItem";
@@ -446,6 +409,53 @@
             this.新增管理者ToolStripMenuItem.Text = "新增管理者";
             this.新增管理者ToolStripMenuItem.Click += new System.EventHandler(this.新增管理者ToolStripMenuItem_Click);
             // 
+            // 新增場地ToolStripMenuItem
+            // 
+            this.新增場地ToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
+            this.新增場地ToolStripMenuItem.Name = "新增場地ToolStripMenuItem";
+            this.新增場地ToolStripMenuItem.Size = new System.Drawing.Size(223, 32);
+            this.新增場地ToolStripMenuItem.Text = "新增場地";
+            this.新增場地ToolStripMenuItem.Click += new System.EventHandler(this.新增場地ToolStripMenuItem_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(552, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 104);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // fACEBOOKToolStripMenuItem
+            // 
+            this.fACEBOOKToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
+            this.fACEBOOKToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fACEBOOKToolStripMenuItem.Image")));
+            this.fACEBOOKToolStripMenuItem.Name = "fACEBOOKToolStripMenuItem";
+            this.fACEBOOKToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
+            this.fACEBOOKToolStripMenuItem.Text = "FACEBOOK";
+            // 
+            // iNSTAGRAMToolStripMenuItem
+            // 
+            this.iNSTAGRAMToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
+            this.iNSTAGRAMToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("iNSTAGRAMToolStripMenuItem.Image")));
+            this.iNSTAGRAMToolStripMenuItem.Name = "iNSTAGRAMToolStripMenuItem";
+            this.iNSTAGRAMToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
+            this.iNSTAGRAMToolStripMenuItem.Text = "INSTAGRAM";
+            // 
+            // yOUTUBEToolStripMenuItem
+            // 
+            this.yOUTUBEToolStripMenuItem.AutoToolTip = true;
+            this.yOUTUBEToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
+            this.yOUTUBEToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yOUTUBEToolStripMenuItem.Image")));
+            this.yOUTUBEToolStripMenuItem.Name = "yOUTUBEToolStripMenuItem";
+            this.yOUTUBEToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.yOUTUBEToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
+            this.yOUTUBEToolStripMenuItem.Text = "YOUTUBE";
+            this.yOUTUBEToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.yOUTUBEToolStripMenuItem.Click += new System.EventHandler(this.yOUTUBEToolStripMenuItem_Click);
+            // 
             // 登出ToolStripMenuItem1
             // 
             this.登出ToolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -486,9 +496,9 @@
             this.splitContainer1.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -538,5 +548,6 @@
         private System.Windows.Forms.ToolStripMenuItem 對課程ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 對教練ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 場地付款資訊ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 新增場地ToolStripMenuItem;
     }
 }
