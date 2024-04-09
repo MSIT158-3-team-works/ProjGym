@@ -41,6 +41,7 @@ namespace ProjGym
             f.afterLogin += this.showinfo;
             f.ShowDialog();
             if (f.isOK != DialogResult.OK) return; 
+            this.登入ToolStripMenuItem.Visible = false;
         }
         private void closeCurrentForm()
         {
@@ -184,7 +185,8 @@ namespace ProjGym
             if (Logout != DialogResult.OK) return;
             this.identity = null;
             this.lblWelcome = null;
-            showmain(); 
+            showmain();
+            this.登入ToolStripMenuItem.Visible = true;
         }
 
         private void showmain()

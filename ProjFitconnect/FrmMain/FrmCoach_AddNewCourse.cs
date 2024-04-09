@@ -37,8 +37,8 @@ namespace ProjGym
                           select period;
             periods.ToList().ForEach(period =>
             {
-                this.cb_TimePeriodStart.Items.Add(period.time_name.ToString());
-                this.cb_TimePeriodEnd.Items.Add(period.time_name.ToString());
+                this.cb_TimePeriodStart.Items.Add(period.time_name.ToString().Substring(0, 5));
+                this.cb_TimePeriodEnd.Items.Add(period.time_name.ToString().Substring(0, 5));
             });
         }
 

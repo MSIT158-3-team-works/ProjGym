@@ -51,7 +51,7 @@ namespace FrmMain
                 
                 rb.tc=item.classes;
                 rb.ids = item.identity;
-                rb.csch = item.classSchedule.ToString();
+                rb.csch = item.classSchedule.ToShortDateString();
                 rb.time = item.time;
                 rb.showReserve += showReserve;
                 flowLayoutPanel1.Controls.Add(rb);
